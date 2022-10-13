@@ -14,7 +14,7 @@ export class CountriesComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.data = this.dataservice.getDataProp(['region', 'population', 'flags', 'capitol', 'name']).subscribe(responseData => {
+    this.data = this.dataservice.getDataProp(['region', 'population', 'flags', 'capital', 'name']).subscribe(responseData => {
       this.countries = responseData;
       console.log(responseData);
     })

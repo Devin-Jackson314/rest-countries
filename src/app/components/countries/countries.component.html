@@ -1,3 +1,21 @@
 <div class="container">
-  <div class="countryCards"></div>
+  <div class="countryCards" *ngFor="let country of countries">
+    <img class="flags" src="{{ country.flags.png }}" alt="" />
+
+    <div class="countryName">
+      <p>{{ country.name.common }}</p>
+    </div>
+
+    <div class="population">
+      <p>{{ country.population }}</p>
+    </div>
+
+    <div class="region">
+      <p>{{ country.region }}</p>
+    </div>
+
+    <div class="region">
+      <p>{{ country.capital }}</p>
+    </div>
+  </div>
 </div>
