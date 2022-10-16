@@ -8,6 +8,8 @@ import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CountriesfullComponent } from './components/countriesfull/countriesfull.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CountriesComponent,
     CountriesfullComponent,
     NavbarComponent,
+    DropdownComponent,
+    SearchbarComponent,
   
   ],
   imports: [

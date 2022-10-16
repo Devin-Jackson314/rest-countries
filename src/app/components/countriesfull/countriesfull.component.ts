@@ -43,9 +43,15 @@ export class CountriesfullComponent implements OnInit {
       this.countryname = data[0];
       this.countryId = this.countryname.currencies
       this.newArray = [];
+      
       Object.keys(this.countryId).forEach((element) => {
         this.newArray.push(this.countryId[element].name)
+        console.log(element, "elements")
+        console.log(this.countryId, "country currency")
+        console.log(this.newArray, "array")
       })
+
+     
       
     })
   }
