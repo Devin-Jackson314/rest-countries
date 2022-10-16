@@ -15,6 +15,8 @@ export class CountriesfullComponent implements OnInit {
   languages: any;
   name: any;
   countryname: any;
+  countryId: any;
+  newArray: any;
 
   constructor(private dataservice: DataService,
   private route: ActivatedRoute) { }
@@ -39,6 +41,12 @@ export class CountriesfullComponent implements OnInit {
   getCountry() {
     return this.dataservice.getCountryName(this.name.name).subscribe((data: any) => {
       this.countryname = data[0];
+      this.countryId = this.countryname.currencies
+      this.newArray = [];
+      Object.keys(this.countryId).forEach((element) => {
+        this.newArray.push(this.countryId[element].name)
+      })
+      
     })
   }
 
