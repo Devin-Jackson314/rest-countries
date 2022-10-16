@@ -5,7 +5,7 @@ import { CountriesfullComponent } from './components/countriesfull/countriesfull
 
 const routes: Routes = [
   { path: 'countries', component: CountriesComponent },
-  { path: "full", component: CountriesfullComponent}
+  { path: 'countries/:name', component: CountriesfullComponent}
  ];
 
 @NgModule({

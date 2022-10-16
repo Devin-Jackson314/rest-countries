@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
   allData = "https://restcountries.com/v3.1/all?fields={name},{region},{capital}";
   filterUrl = 'https://restcountries.com/v3.1/all?fields='
+  countryNameUrl: any;
   
   constructor(private http: HttpClient) { }
 
@@ -20,5 +21,10 @@ export class DataService {
  
   }
 
+  getCountryName(name: string) {
+    this.countryNameUrl = 'https://restcountries.com/v3.1/name/' + name + '?fullText=true';
+    return this.http.get(this.countryNameUrl);
+  }
+ 
 
 }

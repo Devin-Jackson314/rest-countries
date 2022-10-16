@@ -7,12 +7,14 @@ import { CountriesComponent } from './components/countries/countries.component';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CountriesfullComponent } from './components/countriesfull/countriesfull.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountriesComponent,
     CountriesfullComponent,
+    NavbarComponent,
   
   ],
   imports: [

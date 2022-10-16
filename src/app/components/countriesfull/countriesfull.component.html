@@ -1,44 +1,44 @@
 <div class="container">
-  <div class="countryCards" *ngFor="let country of countries">
-    <img class="flags" src="{{ country.flags.svg }}" alt="" />
+  <div class="countryCards">
+    <img class="flags" src="{{ countryname.flags.svg }}" alt="" />
 
     <div class="countryName">
-      <p>{{ country.name.common }}</p>
+      <p>{{ countryname.name.common }}</p>
     </div>
 
     <div class="population">
-      <p>{{ country.population }}</p>
+      <p>{{ countryname.population }}</p>
     </div>
 
     <div class="region">
-      <p>{{ country.region }}</p>
+      <p>{{ countryname.region }}</p>
     </div>
 
     <div class="subregion">
-      <p>{{ country.subregion }}</p>
+      <p>{{ countryname.subregion }}</p>
     </div>
 
     <div class="capital">
-      <p>{{ country.capital }}</p>
+      <p>{{ countryname.capital }}</p>
     </div>
 
     <div class="tld">
-      <p>{{ country.tld }}</p>
+      <p>{{ countryname.tld }}</p>
     </div>
 
     <div class="currencies">
       <p>
-        {{ country.currencies.isk }}
+        {{ countryname.currencies.isk }}
       </p>
     </div>
     <div class="languages">
-      <p *ngFor="let item of country.languages | keyvalue; let i = index">
+      <p *ngFor="let item of countryname.languages | keyvalue; let i = index">
         {{ item.value }}
       </p>
     </div>
 
     <div class="borders">
-      <p>{{ country.borders }}</p>
+      <p>{{ countryname.borders }}</p>
     </div>
   </div>
 </div>

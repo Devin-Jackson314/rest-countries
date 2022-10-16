@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+import { ActivatedRoute,Params } from '@angular/router';
+import { DataService,  } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-countriesfull',
@@ -12,19 +13,32 @@ export class CountriesfullComponent implements OnInit {
   language: any;
   stringObject: any;
   languages: any;
+  name: any;
+  countryname: any;
 
-  constructor(private dataservice: DataService) { }
+  constructor(private dataservice: DataService,
+  private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-     this.data = this.dataservice.getDataProp(['region', 'subregion', 'population', 'flags', 'capital', 'name', 'nativename', 'tld', 'currencies', 'languages', 'borders']).subscribe(responseData => {
-       this.countries = responseData;
-       console.log(this.countries)
-      //  this.language = this.dataservice.getDataProp(['languages']).subscribe(responseData => {
-      //    this.languages = responseData
-        
-      //    console.log(this.languages);
-      //  })
+    this.name = { 
+      name: this.route.snapshot.params['name']
+    }
+
+    this.route.params.subscribe((params: Params) => {
+      this.name.name = params['name']
+      this.getCountry()
+    })
+    //  this.data = this.dataservice.getDataProp(['region', 'subregion', 'population', 'flags', 'capital', 'name', 'nativename', 'tld', 'currencies', 'languages', 'borders']).subscribe(responseData => {
+    //    this.countries = responseData;
+    //    console.log(this.countries)
+      
     
+    // })
+  }
+
+  getCountry() {
+    return this.dataservice.getCountryName(this.name.name).subscribe((data: any) => {
+      this.countryname = data[0];
     })
   }
 
