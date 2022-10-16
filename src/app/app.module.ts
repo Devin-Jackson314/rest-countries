@@ -10,6 +10,7 @@ import { CountriesfullComponent } from './components/countriesfull/countriesfull
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { FilterbyregionPipe } from './pipes/filterbyregion.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     NavbarComponent,
     DropdownComponent,
     SearchbarComponent,
+    FilterbyregionPipe,
   
   ],
   imports: [

@@ -1,4 +1,5 @@
 <div class="container">
+  <app-dropdown></app-dropdown>
   <div class="countryCards" *ngFor="let country of countries">
     <a [routerLink]="['/countries', country.name.official]"
       ><img class="flags" src="{{ country.flags.png }}" alt="" />
