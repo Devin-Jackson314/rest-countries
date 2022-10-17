@@ -1,0 +1,22 @@
+@media (min-width: 375px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 375px;
+    height: 80px;
+  }
+
+  h1 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111517;
+    margin-top: 16px;
+  }
+
+  p {
+    margin-left: -115px;
+  }
+}

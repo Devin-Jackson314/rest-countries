@@ -1,0 +1,10 @@
+@media (min-width: 375px) {
+  input {
+    background: url(../../../assets/search.svg) no-repeat left -0px center;
+  }
+
+  .searchbar {
+    width: 343px;
+    height: 48px;
+  }
+}
