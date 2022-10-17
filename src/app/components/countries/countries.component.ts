@@ -9,6 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 export class CountriesComponent implements OnInit {
   data: any;
   countries: any;
+  public searchFilter: any = '';
 
   constructor(private dataservice: DataService) { }
 

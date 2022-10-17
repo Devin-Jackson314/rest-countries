@@ -17,6 +17,7 @@ export class CountriesfullComponent implements OnInit {
   countryname: any;
   countryId: any;
   newArray: any;
+  public searchFilter: any = '';
 
   constructor(private dataservice: DataService,
   private route: ActivatedRoute) { }

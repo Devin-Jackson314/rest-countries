@@ -1,11 +1,15 @@
 <div class="container">
+  <app-searchbar></app-searchbar>
   <app-dropdown></app-dropdown>
-  <div class="countryCards" *ngFor="let country of countries">
+  <div
+    class="countryCards"
+    *ngFor="let country of countries | search: searchFilter:'region'"
+  >
     <a [routerLink]="['/countries', country.name.official]"
       ><img class="flags" src="{{ country.flags.png }}" alt="" />
 
       <div class="countryName">
-        <p>{{ country.name.common }}</p>
+        <p>{{ country.name.official }}</p>
       </div>
 
       <div class="population">
