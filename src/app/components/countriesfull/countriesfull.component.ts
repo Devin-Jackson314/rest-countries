@@ -42,6 +42,7 @@ export class CountriesfullComponent implements OnInit {
   getCountry() {
     return this.dataservice.getCountryName(this.name.name).subscribe((data: any) => {
       this.countryname = data[0];
+      console.log(this.countryname, "country return")
       this.countryId = this.countryname.currencies
       this.newArray = [];
       

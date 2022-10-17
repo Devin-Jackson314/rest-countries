@@ -10,7 +10,7 @@ export class CountriesComponent implements OnInit {
   data: any;
   countries: any;
   public searchFilter: any = '';
-
+ region: any = '';
   constructor(private dataservice: DataService) { }
 
   ngOnInit(): void {

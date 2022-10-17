@@ -14,7 +14,7 @@ export class SearchPipe implements PipeTransform {
       return value;
     }
     for (const item of value) {
-      let filterItem = item[propName].toLowerCase();
+      let filterItem = item[propName].common.toLowerCase();
       let theString = filterString.toLowerCase();
       
       //console.log(filterItem);
