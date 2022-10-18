@@ -4,6 +4,7 @@
     justify-content: space-between;
     width: 375px;
     height: 80px;
+    background: #ffffff;
   }
 
   h1 {
@@ -14,9 +15,20 @@
     line-height: 20px;
     color: #111517;
     margin-top: 16px;
+    margin-left: 19px;
   }
 
+  .header {
+    background: #ffffff;
+  }
   p {
     margin-left: -115px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    height: 80px;
   }
 }
