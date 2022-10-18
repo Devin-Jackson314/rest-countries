@@ -8,7 +8,7 @@
         class="search"
         type="text"
         [(ngModel)]="searchFilter"
-        placeholder="     Search for countries"
+        placeholder="    &nbsp;&nbsp;&nbsp;Search&nbsp;for&nbsp;countries"
       />
     </div>
     <div class="dropdown">
@@ -42,14 +42,17 @@
         </div>
 
         <div class="description">
+          <p>Population:&nbsp;</p>
           <p>{{ country.population }}</p>
         </div>
 
         <div class="description">
+          <p>Region:&nbsp;</p>
           <p>{{ country.region }}</p>
         </div>
 
         <div class="description">
+          <p>Capital:&nbsp;</p>
           <p>{{ country.capital }}</p>
         </div>
       </a>
