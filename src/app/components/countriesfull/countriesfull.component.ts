@@ -58,4 +58,8 @@ export class CountriesfullComponent implements OnInit {
     })
   }
 
+  onClick() {
+    window.location.href="/countries"
+  }
+
 }
