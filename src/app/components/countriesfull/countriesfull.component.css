@@ -21,4 +21,40 @@
   .button {
     margin-top: 55px;
   }
+
+  .countryName {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 30px;
+    color: #111517;
+  }
+
+  .countryLine {
+    display: flex;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 32px;
+    color: #111517;
+  }
+}
+
+@media (min-width: 1440px) {
+  img {
+    width: 560px;
+    height: 401px;
+  }
+
+  div {
+    background: #ffffff;
+  }
+
+  .countryCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

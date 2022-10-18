@@ -35,21 +35,21 @@
       <a [routerLink]="['/countries', country.name.common]"
         ><img class="flags" src="{{ country.flags.png }}" alt="" />
 
-        <div class="countryName">
-          <p>
-            <b>{{ country.name.common }}</b>
+        <div class="description">
+          <p class="bold">
+            {{ country.name.common }}
           </p>
         </div>
 
-        <div class="population">
+        <div class="description">
           <p>{{ country.population }}</p>
         </div>
 
-        <div class="region">
+        <div class="description">
           <p>{{ country.region }}</p>
         </div>
 
-        <div class="capital">
+        <div class="description">
           <p>{{ country.capital }}</p>
         </div>
       </a>

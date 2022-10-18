@@ -46,6 +46,24 @@
   .subcontainer {
     margin-top: 20px;
   }
+
+  .description {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #111517;
+  }
+
+  .bold {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 @media (min-width: 1440px) {

@@ -23,39 +23,53 @@
 
   <div class="countryCards">
     <img class="flags" src="{{ countryname.flags.png }}" alt="" />
+    <div class="block">
+      <div class="countryName">
+        <p>{{ countryname.name.common }}</p>
+      </div>
 
-    <div class="countryName">
-      <p>{{ countryname.name.common }}</p>
+      <div class="countryLine">
+        <p>Native&nbsp;Name:&nbsp;</p>
+        <p *ngFor="let item of newArray">{{ item }}"</p>
+      </div>
+      <div class="countryLine">
+        <p>Population:&nbsp;</p>
+        <p>{{ countryname.population }}</p>
+      </div>
+
+      <div class="countryLine">
+        <p>Region:&nbsp;</p>
+        <p>{{ countryname.region }}</p>
+      </div>
+
+      <div class="countryLine">
+        <p>Sub&nbsp;Region:&nbsp;</p>
+        <p>{{ countryname.subregion }}</p>
+      </div>
+
+      <div class="countryLine">
+        <p>Capital:&nbsp;</p>
+        <p>{{ countryname.capital }}</p>
+      </div>
     </div>
 
-    <div class="population">
-      <p>{{ countryname.population }}</p>
-    </div>
+    <div class="blocktwo">
+      <div class="countryLine">
+        <p>Top&nbsp;Level&nbsp;Domain:&nbsp;</p>
+        <p>{{ countryname.tld }}</p>
+      </div>
 
-    <div class="region">
-      <p>{{ countryname.region }}</p>
-    </div>
+      <div class="countryLine">
+        <p>Currencies:&nbsp;</p>
+        <p *ngFor="let item of newArray">{{ item }}</p>
+      </div>
 
-    <div class="subregion">
-      <p>{{ countryname.subregion }}</p>
-    </div>
-
-    <div class="capital">
-      <p>{{ countryname.capital }}</p>
-    </div>
-
-    <div class="tld">
-      <p>{{ countryname.tld }}</p>
-    </div>
-
-    <div class="currencies">
-      <p *ngFor="let item of newArray">{{ item }}</p>
-    </div>
-
-    <div class="languages">
-      <p *ngFor="let item of countryname.languages | keyvalue; let i = index">
-        {{ item.value }}
-      </p>
+      <div class="countryLine">
+        <p>Languages:&nbsp;</p>
+        <p *ngFor="let item of countryname.languages | keyvalue; let i = index">
+          {{ item.value }}
+        </p>
+      </div>
     </div>
 
     <div class="borders">
