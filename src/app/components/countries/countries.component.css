@@ -6,7 +6,7 @@
   }
 
   select {
-    width: 200px;
+    width: 202px;
     height: 48px;
     margin-top: 27px;
     margin-left: 1px;
@@ -34,11 +34,49 @@
   }
 
   .flags {
+    width: 264px;
+    height: 160px;
     margin-top: 10px;
-    margin-bottom: -12px;
   }
 
   img {
-    margin-left: -24px;
+    margin-left: -5px;
+  }
+
+  .subcontainer {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .subcontainer {
+    display: flex;
+    width: auto;
+    margin-left: 62px;
+  }
+  .regions {
+    margin-left: 763px;
+  }
+
+  .searchBar {
+    margin-top: 22px;
+  }
+
+  .countryCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 9px;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .flags {
+    width: 264px;
+    height: 160px;
   }
 }
