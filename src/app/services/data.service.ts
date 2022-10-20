@@ -9,6 +9,7 @@ export class DataService {
   allData = "https://restcountries.com/v3.1/all?fields={name},{region},{capital}";
   filterUrl = 'https://restcountries.com/v3.1/all?fields='
   countryNameUrl: any;
+  bordersUrl: any;
   
   constructor(private http: HttpClient) { }
 
@@ -25,6 +26,13 @@ export class DataService {
     this.countryNameUrl = 'https://restcountries.com/v3.1/name/' + name + '?fullText=true';
     return this.http.get(this.countryNameUrl);
   }
+
+  getBordersCountries(borders: any) {
+    this.bordersUrl = 'https://restcountries.com/v3.1/alpha?codes=' + borders;
+    return this.http.get(this.bordersUrl);
+  }
+
+
  
 
 }

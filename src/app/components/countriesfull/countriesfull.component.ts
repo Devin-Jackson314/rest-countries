@@ -20,6 +20,8 @@ export class CountriesfullComponent implements OnInit {
   public searchFilter: any = '';
   countriesId: any;
   countriesIdArray: any;
+  borderCountries: any;
+  borders: any;
 
   constructor(private dataservice: DataService,
   private route: ActivatedRoute) { }
@@ -45,29 +47,43 @@ export class CountriesfullComponent implements OnInit {
     return this.dataservice.getCountryName(this.name.name).subscribe((data: any) => {
       this.countryname = data[0];
       this.countries = data;
-      console.log(this.countries, "all data")
-      console.log(this.countryname, "country return")
+      //console.log(this.countries, "all data")
+    //  console.log(this.countryname, "country return")
       this.countryId = this.countryname.currencies
       this.countriesId = this.countryname.name.nativeName
       this.countriesIdArray = [];
       this.newArray = [];
       
+
+      
       Object.keys(this.countryId).forEach((element) => {
         this.newArray.push(this.countryId[element].name)
-        console.log(element, "elements")
-        console.log(this.countryId, "country currency")
-        console.log(this.newArray, "array")
+        //console.log(element, "elements")
+       // console.log(this.countryId, "country currency")
+       // console.log(this.newArray, "array")
       })
 
-       
+      console.log(this.countriesId, "native name");
       Object.keys(this.countriesId).forEach((element) => {
-        this.newArray.push(this.countries[element].name.nativName)
-        console.log(element, "elements")
-        console.log(this.countries, "country currency")
-        console.log(this.countriesIdArray, "array")
+        console.log(this.countriesId[element], "element")
+        this.countriesIdArray.push(this.countriesId[element].common)
+        //console.log(element, "elements")
+       // console.log(this.countries, "country currency")
+       // console.log(this.countriesIdArray, "array")
       })
 
-     
+      console.log(this.countriesIdArray)
+
+      if (this.countryname.borders) {
+        this.borderCountries = this.countryname.borders
+        this.dataservice.getBordersCountries(this.borderCountries).subscribe((data: any) => {
+          this.borders = [];
+          //console.log(data, "borders data")
+          data.forEach((element: any) => {
+            this.borders.push(element.name.common)
+          });
+        })
+     }
       
     })
   }

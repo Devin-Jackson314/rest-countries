@@ -11,6 +11,9 @@ export class CountriesComponent implements OnInit {
   countries: any;
   public searchFilter: any = '';
  region: any = '';
+  population: any;
+  
+  toCommas: any;
   constructor(private dataservice: DataService) { }
 
   ngOnInit(): void {
@@ -19,7 +22,14 @@ export class CountriesComponent implements OnInit {
       this.countries = responseData;
       console.log(responseData);
     })
+    
+    this.data = this.dataservice.getDataProp(['population']).subscribe(responseData => {
+      this.population = responseData;
+      this.toCommas = responseData;
+        this.toCommas.toLocaleString("en-US") 
+      console.log(responseData);
+      console.log(responseData.toLocaleString())
+    })
   }
-
   
 }

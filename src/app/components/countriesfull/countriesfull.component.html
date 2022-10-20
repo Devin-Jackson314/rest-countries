@@ -30,11 +30,11 @@
 
       <div class="countryLine">
         <p>Native&nbsp;Name:&nbsp;</p>
-        <p *ngFor="let item of newArray">{{ item }}"</p>
+        <p *ngFor="let item of countriesIdArray">{{ item }}"</p>
       </div>
       <div class="countryLine">
         <p>Population:&nbsp;</p>
-        <p>{{ countryname.population }}</p>
+        <p>{{ countryname.population | number }}</p>
       </div>
 
       <div class="countryLine">
@@ -73,7 +73,10 @@
     </div>
 
     <div class="borders">
-      <p>{{ countryname.borders }}</p>
+      <p>Borders:&nbsp;</p>
+      <p *ngFor="let item of borders" [routerLink]="['/countries', item]">
+        {{ item }}
+      </p>
     </div>
   </div>
 </div>
